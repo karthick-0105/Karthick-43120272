@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Food Menu</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f6daaf;
+            padding-bottom: 100px; 
+            margin: 0;
+        }
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; 
+            height: 100px;
+            background-color: rgb(39, 39, 39);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+            z-index: 1000;
+            color:red;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu-icon {
+            font-size: 24px;
+            color: red;
+            position: absolute;
+            right: 50px;
+            top: 32px;
+            cursor: pointer;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 1000px;
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+        .food-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background:#e65757;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .food-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .food-item img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .food-item img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .food-info {
+            max-width: 600px;
+        }
+        h1{
+            margin-top:120px;        }
+        h2 {
+            margin-bottom: 5px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw; 
+            height: 60px;
+            background-color: rgb(39, 39, 39);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer-links {
+            display: flex;
+            gap: 60px;
+            margin-top: 15px;
+        }
+        .footer-links div {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: red;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-right: 100px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="header-content">
+            <img src="logo.jpg" alt="logo" width="275px" height="35px" style="margin-top: 30px;">
+            <p style="font-size: 22px; margin-top: 5px;">Japanese Cuisine</p>
+        </div>
+        <div class="menu-icon" id="menu-toggle">&#9776;</div>
+    </div>
+    <main>
+        <h1>Japanese Food Menu</h1>
+        <div class="gallery">
+            <div class="food-item">
+                <img src="sushi.jpg" alt="Sushi">
+                <div class="food-info">
+                    <h2>Sushi</h2>
+                    <p>It is a traditional Japanese dish made with vinegared rice (鮨飯, sushi-meshi), typically seasoned with sugar and salt, and combined with a variety of ingredients (ねた, neta), such as seafood, vegetables, or meat.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="onigiri.jpeg" alt="Onigiri">
+                <div class="food-info">
+                    <h2>Onigiri</h2>
+                    <p>Onigiri are Japanese rice balls that are made from short or medium grain Japanese rice, and wrapped in nori seaweed.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="taiyaki.jpg" alt="Taiyaki">
+                <div class="food-info">
+                    <h2>Taiyaki</h2>
+                    <p>Taiyaki is a Japanese fish-shaped cake or dessert that's often sold as street food. The name taiyaki literally translates to "fried fish".</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="Misosoup.jpg" alt="Miso Soup">
+                <div class="food-info">
+                    <h2>Miso Soup</h2>
+                    <p>Miso soup (味噌汁 or お味噌汁, miso-shiru or omiso-shiru) is a traditional Japanese soup consisting of miso paste mixed with a dashi stock.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="ramen.jpeg" alt="Ramen">
+                <div class="food-info">
+                    <h2>Ramen</h2>
+                    <p>Ramen is a Japanese noodle soup. It consists of Chinese wheat noodles served in a meat or (occasionally) fish-based broth, often flavored with soy sauce or miso, and uses toppings such as sliced pork, dried seaweed, menma, and green onions.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <img src="logo.jpg" alt="logo" width="250px" height="37.5px" style="margin-top: 12px;">
+        <div class="footer-links">
+            <div>
+                <a href="#">Order Tracking</a>
+                <a href="#">New Order</a>
+                <a href="#">Contact Us</a>
+                <a href="#">News & Blogs</a>
+            </div>
+            <div>
+                <a href="#">Help & Support</a>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#">&#xf09a;</a>
+            <a href="#">&#xf099;</a>
+            <a href="#">&#xf16d;</a>
+            <a href="#">&#xf167;</a>
+        </div>
+    </div>
+</body>
+</html>
